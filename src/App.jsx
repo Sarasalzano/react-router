@@ -6,8 +6,6 @@ import About from './pages/About';
 import Products from './pages/Products';
 
 function App() {
-
-
   return (
     <>
       <BrowserRouter>
@@ -23,5 +21,4 @@ function App() {
     </>
   )
 }
-
 export default App

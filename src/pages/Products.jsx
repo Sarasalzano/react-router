@@ -11,23 +11,24 @@ export default function CardProducts(){
         }, []);
 
     return(
-        <div className="container">
+        <div className="products-container">
             <div className="row">
-                <div className="column">
-                    <div className="card">
-                        {products.map((product) => (
-                        <>                        
-                        <div key={product.id} className="img-wrapper">
+                {products.map((product) => (
+                <>   
+                <div key={product.id} className="column">
+                                  
+                        <div  className="img-wrapper">
                             <img src={product.image} alt={product.title} />
                         </div>
-                        <div className="item-title">{product.title}</div>
-                        <div className="item-price">{product.price}</div>
-                        <div className="item-description">{product.description}</div>
-                        <div className="item-rate">{product.rating.rate} ({product.rating.count} reviews)</div>
-                        </>
-                        ))}
-                    </div>
+                            <h3 className="item-title">{product.title}</h3>
+                            <span className="item-price">€{product.price}</span>
+                            <div className="reviews-container">
+                                <span className="item-rate">({product.rating.count} reviews)</span>
+                            </div>
+
                 </div>
+                </>
+                ))}
             </div>
         </div>
     );
