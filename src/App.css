@@ -43,11 +43,16 @@ ul a {
     font-family: 1.5rem;
 }
 
+
 /* BARRA DI NAVIGAZIONE */
 header {
     background-color: #1E1E1E;
     height: 70px;
     padding-top: 20px;
+}
+
+a.active {
+     color:#F15BB5;
 }
 
 /* PAGINA INIZIALE */
