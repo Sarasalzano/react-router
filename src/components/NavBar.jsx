@@ -1,12 +1,22 @@
+import { Link, NavLink } from "react-router-dom";
+import Homepage from 
+"../pages/Homepage";
+import About from "../pages/About";
+import Products from "../pages/Products";
 export default function NavBar(){
-    const navItems = ["HOMEPAGE", "CHI SIAMO", "PRODOTTI"];
 
     return(
         <nav>
             <ul>
-            {navItems.map(navItem => (
-                <li key={index}>{navItem}</li>
-            ))}
+                <li>
+                    <Link to="/"> HOMEPAGE </Link>
+                </li>
+                <li>
+                    <NavLink to="/about" > ABOUT </NavLink>
+                </li>
+                <li>
+                    <NavLink to="/products"> OUR PRODUCTS </NavLink>
+                </li>
             </ul>
         </nav>
     )
