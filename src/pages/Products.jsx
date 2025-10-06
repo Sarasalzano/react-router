@@ -15,17 +15,15 @@ export default function CardProducts(){
             <div className="row">
                 {products.map((product) => (
                 <>   
-                <div key={product.id} className="column">
-                                  
-                        <div  className="img-wrapper">
-                            <img src={product.image} alt={product.title} />
-                        </div>
-                            <h3 className="item-title">{product.title}</h3>
-                            <span className="item-price">€{product.price}</span>
-                            <div className="reviews-container">
-                                <span className="item-rate">({product.rating.count} reviews)</span>
-                            </div>
-
+                <div key={product.id} className="column">          
+                    <div  className="img-wrapper">
+                        <img src={product.image} alt={product.title} />
+                    </div>
+                    <h3 className="item-title">{product.title}</h3>
+                    <span className="item-price">€{product.price}</span>
+                    <div className="reviews-container">
+                        <span className="item-rate">({product.rating.count} reviews)</span>
+                    </div>
                 </div>
                 </>
                 ))}
