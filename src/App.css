@@ -187,12 +187,12 @@ span {
 
 .column-left {
     width: 50%;
-    padding: 30px;
+    padding: 15px;
 }
 
 .column-right {
     width: 50%;
-    padding: 30px;
+    padding: 15px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
