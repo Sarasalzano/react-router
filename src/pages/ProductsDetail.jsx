@@ -14,9 +14,13 @@ useEffect(()=>{
     axios.get(`https://fakestoreapi.com/products/${id}`)
     .then(res => setProduct(res.data))
     .catch(err => console.log(err))
-},[])
+},[id])
 
     return(
-        <h2>id prodotto: {id}</h2>
+        <div className="Wrapper">
+        <h2>id prodotto:{id}</h2>
+        <img src={product.image} alt={product.title} />
+        <p>{product.description}</p>
+        </div>
     )
 }

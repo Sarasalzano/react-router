@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import ProductsDetail from "./ProductsDetail";
 
-export default function CardProducts(){
+
+export default function Products(){
    //setto variabile di stato dei prodotti come array vuoto
     const [products, setProducts] =useState([]);
     //chiamata axios per recuperare i prodotti da inserire nelle card
@@ -15,7 +18,6 @@ export default function CardProducts(){
         <div className="products-container">
             <div className="row">
                 {products.map((product) => (
-                <>   
                 <div key={product.id} className="column">          
                     <div  className="img-wrapper">
                         <img src={product.image} alt={product.title} />
@@ -24,12 +26,13 @@ export default function CardProducts(){
                     <span className="item-price">€{product.price}</span>
                     {/* Link alla pagina di dettaglio del prodotto con il suo id */}
                     <Link to={`/products/${product.id}`}>
-                    Product Details
+                        Products Details
                     </Link>
                 </div>
-                </>
                 ))}
             </div>
+            <Outlet />
         </div>
+
     );
 }
