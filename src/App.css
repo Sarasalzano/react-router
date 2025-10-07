@@ -187,11 +187,12 @@ span {
 
 .column-left {
     width: 50%;
+    padding: 30px;
 }
 
 .column-right {
     width: 50%;
-    padding-right: 20px;
+    padding: 30px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -201,6 +202,7 @@ span {
 .column-left img {
     margin: 20px auto;  
     max-height: 100%;  
+    max-width: 100%;
     transform: translateY(50px);
 }
 
