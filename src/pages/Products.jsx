@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function CardProducts(){
    //setto variabile di stato dei prodotti come array vuoto
@@ -21,6 +22,10 @@ export default function CardProducts(){
                     </div>
                     <h3 className="item-title">{product.title}</h3>
                     <span className="item-price">€{product.price}</span>
+                    {/* Link alla pagina di dettaglio del prodotto con il suo id */}
+                    <Link to={`/products/${product.id}`}>
+                    Product Details
+                    </Link>
                 </div>
                 </>
                 ))}

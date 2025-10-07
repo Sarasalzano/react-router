@@ -2,7 +2,7 @@
 import { useParams } from "react-router-dom";
 
 export default function ProductsDetail(){
-//recuperiamo id
+//recupero id
 const {id} =useParams();
 
 
