@@ -9,14 +9,19 @@ function App() {
   return (
     <>
       <BrowserRouter>
-      <Routes>
-        {/* Route nesting: il genitore Layout raggiunge le route figlie */}
+        <Routes>
+        {/* genitore principale: Layout contiene tutte le pagine */}
         <Route path="/" element={<Layout />}>
+          {/* route di default */}
           <Route index element={<Homepage />}/>
           <Route path="about" element={<About />}/>
-          <Route path="products" element={<Products />}/>
+          {/* genitore secondario: products con i figli */}
+          <Route path="products" element={<Products />}>
+            {/* figlio dinamico di products */}
+            <Route path=":id" element={<ProductsDetail />} />
+          </Route>
         </Route>
-      </Routes>
+        </Routes>
       </BrowserRouter>
     </>
   )
