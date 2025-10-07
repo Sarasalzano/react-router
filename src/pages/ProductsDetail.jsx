@@ -17,10 +17,16 @@ useEffect(()=>{
 },[id])
 
     return(
-        <div className="Wrapper">
+        <>
         <h2>id prodotto:{id}</h2>
-        <img src={product.image} alt={product.title} />
-        <p>{product.description}</p>
+        <div className="detail-wrapper">
+            <div className="column-left">
+            <img src={product.image} alt={product.title} />
+            </div>
+             <div className="column-right">
+            <p>{product.description}</p>
+            </div>
         </div>
+        </>
     )
 }

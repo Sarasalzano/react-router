@@ -26,7 +26,7 @@ export default function Products(){
                     <span className="item-price">€{product.price}</span>
                     {/* Link alla pagina di dettaglio del prodotto con il suo id */}
                     <Link to={`/products/${product.id}`}>
-                        Products Details
+                        PRODUCTS DETAIL
                     </Link>
                 </div>
                 ))}
