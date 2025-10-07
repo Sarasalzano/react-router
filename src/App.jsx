@@ -17,9 +17,10 @@ function App() {
           <Route index element={<Homepage />}/>
           <Route path="about" element={<About />}/>
           {/* genitore secondario: products con i figli */}
-          <Route path="products" element={<Products />}>
+          <Route path='products'>
+          <Route path="/products" element={<Products />} />
             {/* figlio dinamico di products */}
-            <Route path=":id" element={<ProductsDetail />} />
+            <Route path="/products/:id" element={<ProductsDetail />} />
           </Route>
         </Route>
         </Routes>
