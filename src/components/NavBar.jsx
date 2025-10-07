@@ -1,6 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import Homepage from 
-"../pages/Homepage";
+//import pages
 import About from "../pages/About";
 import Products from "../pages/Products";
 export default function NavBar(){
